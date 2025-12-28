@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureLogX | Login</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/auth.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-card">
+    <h1 class="auth-title">SecureLogX</h1>
+    <p class="auth-subtitle">SOC Analyst Login</p>
+
+    <form id="login-form" novalidate>
+        <label for="username">Username</label>
+        <input
+                id="username"
+                type="text"
+                autocomplete="username"
+                required
+        >
+
+        <label for="password">Password</label>
+        <input
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                required
+        >
+
+        <button type="submit" class="primary">
+            Login
+        </button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <p class="auth-link">
+        Don’t have an account?
+        <a href="/signup.html">Create one</a>
+    </p>
+</div>
+
+<!-- External JS ONLY -->
+<script src="/login.js" defer></script>
+
+</body>
+</html>
+
+

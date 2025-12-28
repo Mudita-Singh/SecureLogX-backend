@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureLogX | Signup</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/auth.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-card">
+    <h1 class="auth-title">SecureLogX</h1>
+    <p class="auth-subtitle">Create Analyst Account</p>
+
+    <form id="signup-form" novalidate>
+        <label for="username">Username</label>
+        <input
+                id="username"
+                type="text"
+                autocomplete="username"
+                required
+        >
+
+        <label for="password">Password</label>
+        <input
+                id="password"
+                type="password"
+                autocomplete="new-password"
+                required
+        >
+
+        <button type="submit" class="primary">
+            Create Account
+        </button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <p class="auth-link">
+        Already have an account?
+        <a href="/login.html">Login</a>
+    </p>
+</div>
+
+<!-- External JS ONLY -->
+<script src="/signup.js" defer></script>
+
+</body>
+</html>

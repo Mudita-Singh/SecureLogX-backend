@@ -4,12 +4,12 @@ public class ApiResponse {
 
     private boolean success;
     private String message;
-    private String path;
+    private Object data;
 
-    public ApiResponse(boolean success, String message, String path) {
+    public ApiResponse(boolean success, String message, Object data) {
         this.success = success;
         this.message = message;
-        this.path = path;
+        this.data = data;
     }
 
     public boolean isSuccess() {
@@ -20,7 +20,7 @@ public class ApiResponse {
         return message;
     }
 
-    public String getPath() {
-        return path;
+    public Object getData() {
+        return data;
     }
 }

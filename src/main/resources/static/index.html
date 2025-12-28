@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureLogX | SOC Dashboard</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+    <div class="logo">SecureLogX</div>
+
+    <div class="soc-meta">
+        <span id="backendStatus">● Backend: Online</span>
+        <span id="analystInfo">Analyst: —</span>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+    </div>
+</header>
+
+<!-- ================= MAIN DASHBOARD ================= -->
+<main class="container">
+
+    <section class="panel">
+        <h2>Log Analysis</h2>
+
+        <label>Log File Path</label>
+        <input class="path" id="logPath" placeholder="/var/log/auth.log">
+
+        <button class="primary" id="analyzeBtn">Analyze Logs</button>
+    </section>
+
+    <section class="panel">
+        <h2>Encrypted Reports</h2>
+        <p>Generated forensic artifacts will appear here.</p>
+    </section>
+
+    <section class="panel output">
+        <h2>Incident Output</h2>
+        <p>No incidents analyzed yet.</p>
+    </section>
+
+</main>
+
+<!-- ================= INCIDENT MODAL ================= -->
+<div id="incidentModal" class="modal hidden">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2>Incident Details</h2>
+            <button class="close-btn" id="closeIncidentBtn">✕</button>
+        </div>
+
+        <div class="modal-section">
+            <h3>Summary</h3>
+            <div id="incidentDetails"></div>
+        </div>
+
+        <div class="modal-section">
+            <h3>Timeline</h3>
+            <div id="incidentTimeline" class="timeline"></div>
+        </div>
+
+        <div class="modal-section">
+            <h3>Audit Log</h3>
+            <div id="incidentAudit" class="audit-log"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- External JS ONLY -->
+<script src="/script.js" defer></script>
+
+</body>
+</html>
